@@ -1,3 +1,4 @@
+; Current Home Key: ((!))
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
