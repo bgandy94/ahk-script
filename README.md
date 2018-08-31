@@ -6,7 +6,7 @@
 - Download [autohotkey](https://autohotkey.com/download/)
 - Right-click the script.ahk file and click "Compile Script"
 - Press Windows Key + R to open Run dialog and enter "shell:common startup"
-- Copy the script.exe that was generated from the compilation
+- Copy the script.exe that was generated from the compilation into the startup folder
 
 ### This repo includes a basic AHK script that includes the following hotkeys:
 ---
