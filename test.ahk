@@ -3,7 +3,12 @@ CapsLock::ESC
 ESC::CapsLock
 
 ; Shortcuts
-!q::Send !{F4}
+!w::Send !{F4}
+!q::
+    WinGetActiveTitle, ActiveWindowTitle
+    WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
+    Run, cmd /k taskkill /IM %ActiveWindowProcess% /T /F,, Hide
+    return
 !v::
     ActiveOrLaunch("- Visual Studio Code", "C:\Program Files\Microsoft VS Code\Code.exe")
     return
@@ -31,10 +36,15 @@ ESC::CapsLock
     {
         Shutdown, 2
     }
+    if Key = h 
+    {
+        DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+    }
     return
 !Enter::
     Run cmd.exe, C:\
     return
+
 
 ; Functions
 ActiveOrLaunch(title, exePath) 
