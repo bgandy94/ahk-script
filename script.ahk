@@ -2,15 +2,21 @@
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
+GroupAdd, IDEGroup, ahk_exe Code.exe
+GroupAdd, IDEGroup, ahk_exe devenv.exe
+
 ; Key switches
+#IfWinActive ahk_group IDEGroup
 CapsLock::ESC
-ESC::CapsLock
+ESC::CapsLock 
+#IfWinActive
 
 ; Shortcuts
 !w::WinClose, A
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
+    GroupAdd, ActiveWindowAppGroup, ahk_exe %ActiveWindowProcess%
     if (ActiveWindowProcess = "explorer.exe") 
     {
         If (WinExist("ahk_group ExplorerGroup"))
@@ -20,7 +26,7 @@ ESC::CapsLock
     }
     else 
     {
-        Run, cmd /k taskkill /IM %ActiveWindowProcess% /T /F,, Hide
+        WinClose, ahk_group ActiveWindowAppGroup
     }
     return
 !v::
