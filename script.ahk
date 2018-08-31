@@ -16,7 +16,6 @@ ESC::CapsLock
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
-    GroupAdd, ActiveWindowAppGroup, ahk_exe %ActiveWindowProcess%
     if (ActiveWindowProcess = "explorer.exe") 
     {
         If (WinExist("ahk_group ExplorerGroup"))
@@ -26,7 +25,7 @@ ESC::CapsLock
     }
     else 
     {
-        WinClose, ahk_group ActiveWindowAppGroup
+        Run, cmd /k taskkill /IM %ActiveWindowProcess% /T /F,, Hide
     }
     return
 !v::
