@@ -7,7 +7,7 @@ CapsLock::ESC
 ESC::CapsLock
 
 ; Shortcuts
-!w::Send !{F4}
+!w::WinClose, A
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
