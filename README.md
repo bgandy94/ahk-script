@@ -1,9 +1,20 @@
 # ahk-script
 
-This repo includes a basic AHK script that includes the following hotkeys:
+### How to Use 
+---
+- Clone this repo to anywhere on your computer
+- Download [autohotkey](https://autohotkey.com/download/)
+- Right-click the script.ahk file and click "Compile Script"
+- Press Windows Key + R to open Run dialog and enter "shell:common startup"
+- Copy the script.exe that was generated from the compilation
+
+### This repo includes a basic AHK script that includes the following hotkeys:
+---
 
 - Windows commands
     - ```ALT m + r``` : Reboot the PC
+    - ```ALT + q``` : Close active program completely
+    - ```ALT + w``` : Close active window
 - Specific Program launch commands
     - ```ALT + v``` : Open or activate VS Code
     - ```ALT + i``` : Open or activate Chrome
