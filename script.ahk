@@ -1,3 +1,6 @@
+GroupAdd,ExplorerGroup, ahk_class CabinetWClass
+GroupAdd,ExplorerGroup, ahk_class ExploreWClass
+
 ; Key switches
 CapsLock::ESC
 ESC::CapsLock
@@ -7,7 +10,17 @@ ESC::CapsLock
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
-    Run, cmd /k taskkill /IM %ActiveWindowProcess% /T /F,, Hide
+    if (ActiveWindowProcess = "explorer.exe") 
+    {
+        If (WinExist("ahk_group ExplorerGroup"))
+        {
+            WinClose, ahk_group ExplorerGroup
+        }
+    }
+    else 
+    {
+        Run, cmd /k taskkill /IM %ActiveWindowProcess% /T /F,, Hide
+    }
     return
 !v::
     ActiveOrLaunch("- Visual Studio Code", "C:\Program Files\Microsoft VS Code\Code.exe")
