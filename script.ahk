@@ -4,6 +4,7 @@ GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
 GroupAdd, IDEGroup, ahk_exe Code.exe
 GroupAdd, IDEGroup, ahk_exe devenv.exe
+GroupAdd, IDEGroup, ahk_exe studio64.exe
 
 ; Key switches
 #IfWinActive ahk_group IDEGroup
@@ -13,6 +14,9 @@ ESC::CapsLock
 
 ; Shortcuts
 !w::WinClose, A
+!d::
+    ActiveOrLaunch("- Discord", "C:\Users\bgandy\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+    return
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
