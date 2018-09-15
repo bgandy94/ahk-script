@@ -17,7 +17,7 @@
     - ```ALT + w``` : Close active window
 - Specific Program launch commands
     - ```ALT + v``` : Open or activate VS Code
-    - ```ALT + d``` : Open or activate Discor
+    - ```ALT + d``` : Open or activate Discord
     - ```ALT + i``` : Open or activate Chrome
     - ```ALT + ENTER```: Open command line instance
 - Steam-specific commands
