@@ -2,15 +2,9 @@
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
-GroupAdd, IDEGroup, ahk_exe Code.exe
-GroupAdd, IDEGroup, ahk_exe devenv.exe
-GroupAdd, IDEGroup, ahk_exe studio64.exe
-
 ; Key switches
-#IfWinActive ahk_group IDEGroup
 CapsLock::ESC
 ESC::CapsLock 
-#IfWinActive
 
 ; Shortcuts
 !w::WinClose, A
