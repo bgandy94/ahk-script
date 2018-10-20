@@ -15,6 +15,7 @@
     - ```ALT m + r``` : Reboot the PC
     - ```ALT + q``` : Close active program completely
     - ```ALT + w``` : Close active window
+    - ```ALT + a``` : Toggle Audio device (will need to be changed based on order in Sound window)
 - Specific Program launch commands
     - ```ALT + v``` : Open or activate VS Code
     - ```ALT + d``` : Open or activate Discord

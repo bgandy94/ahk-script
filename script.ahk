@@ -61,7 +61,17 @@ ESC::CapsLock
 !Enter::
     Run cmd.exe, C:\
     return
-
+!a::
+    toggle:=!toggle ;toggles up and down states. 
+    Run, mmsys.cpl 
+    WinWait,Sound
+    if toggle
+      ControlSend,SysListView321,{Down 5}
+    Else
+      ControlSend,SysListView321,{Down 1}
+    ControlClick,&Set Default
+    ControlClick,OK 
+    return
 
 ; Functions
 ActiveOrLaunch(title, exePath) 
