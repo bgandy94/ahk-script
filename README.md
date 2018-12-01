@@ -25,3 +25,5 @@
     - ```ALT s + f```: Open Steam Friends list
     - ```ALT s + l```: Open Steam Game Library
     - ```ALT s + s```: Open Steam Store
+- Misc command
+    - ```ALT + p```: Pin window (keep on top)

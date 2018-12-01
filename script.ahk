@@ -72,6 +72,9 @@ ESC::CapsLock
     ControlClick,&Set Default
     ControlClick,OK 
     return
+!p::
+    WinSet, AlwaysOnTop, , A
+    return
 
 ; Functions
 ActiveOrLaunch(title, exePath) 
