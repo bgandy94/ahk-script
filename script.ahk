@@ -8,6 +8,24 @@ ESC::CapsLock
 
 ; Shortcuts
 !w::WinClose, A
+!h::
+    MouseMove, -20, 0, 1, R
+    return
+!j::
+    MouseMove, 0, 20, 1, R
+    return
+!k::
+    MouseMove, 0, -20, 1, R
+    return
+!l::
+    MouseMove, 20, 0, 1, R
+    return
+!Space::
+    MouseClick, Left
+    return
+^!Space::
+    MouseClick, Right
+    return
 !d::
     ActiveOrLaunch("- Discord", "C:\Users\bgandy\AppData\Local\Discord\Update.exe --processStart Discord.exe")
     return
