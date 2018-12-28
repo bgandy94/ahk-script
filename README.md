@@ -11,6 +11,13 @@
 ### This repo includes a basic AHK script that includes the following hotkeys:
 ---
 
+- Vim-style mouse moving
+    - ```ALT + h```: Move mouse left
+    - ```ALT + j```: Move mouse down
+    - ```ALT + k```: Move mouse up
+    - ```ALT + l```: Move mouse right
+    - ```ALT + Space```: Left-click mouse
+    - ```ALT + Ctrl + Space```: Right-click mouse
 - Windows commands
     - ```ALT m + r``` : Reboot the PC
     - ```ALT + q``` : Close active program completely
