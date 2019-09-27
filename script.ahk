@@ -32,8 +32,7 @@ ESC::CapsLock
 !q::
     WinGetActiveTitle, ActiveWindowTitle
     WinGet, ActiveWindowProcess, ProcessName, %ActiveWindowTitle% 
-    if (ActiveWindowProcess = "explorer.exe") 
-    {
+    if (ActiveWindowProcess = "explorer.exe") {
         If (WinExist("ahk_group ExplorerGroup"))
         {
             WinClose, ahk_group ExplorerGroup
@@ -77,7 +76,7 @@ ESC::CapsLock
     }
     return
 !Enter::
-    Run cmd.exe, C:\
+    Run "D:\Program Files\Git\git-bash.exe", C:\
     return
 !a::
     toggle:=!toggle ;toggles up and down states. 
