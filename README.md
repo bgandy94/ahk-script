@@ -11,6 +11,7 @@
 ### This repo includes a basic AHK script that includes the following hotkeys:
 ---
 
+- **Toggle hotkeys on/off with ```RAlt + d```.**
 - Vim-style mouse moving
     - ```ALT + h```: Move mouse left
     - ```ALT + j```: Move mouse down

@@ -1,4 +1,3 @@
-; Current Home Key: ((!))
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
@@ -7,6 +6,7 @@ CapsLock::ESC
 ESC::CapsLock 
 
 ; Shortcuts
+RAlt & d::Suspend
 !w::WinClose, A
 !h::
     MouseMove, -20, 0, 1, R
