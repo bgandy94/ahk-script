@@ -1,9 +1,12 @@
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
+SetTitleMatchMode, 2
 
 ; Key switches
+#IfWinNotActive, VirtualBox
 CapsLock::ESC
 ESC::CapsLock 
+#IfWinNotActive
 
 ; Shortcuts
 RAlt & d::Suspend
@@ -75,9 +78,11 @@ RAlt & d::Suspend
         DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
     }
     return
+#IfWinNotActive, - Android Studio
 !Enter::
     Run "D:\Program Files\Git\git-bash.exe", C:\
     return
+#IfWinNotActive
 !a::
     toggle:=!toggle ;toggles up and down states. 
     Run, mmsys.cpl 
