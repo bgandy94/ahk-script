@@ -80,7 +80,7 @@ RAlt & d::Suspend
     return
 #IfWinNotActive, - Android Studio
 !Enter::
-    Run "D:\Program Files\Git\git-bash.exe", C:\
+    Run "C:\Windows\System32\wsl.exe", C:\
     return
 #IfWinNotActive
 !a::

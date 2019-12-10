@@ -28,10 +28,13 @@
     - ```ALT + v``` : Open or activate VS Code
     - ```ALT + d``` : Open or activate Discord
     - ```ALT + i``` : Open or activate Chrome
-    - ```ALT + ENTER```: Open command line instance
+    - ```ALT + ENTER```: Open command line instance (for user-defined cli see *notes*)
 - Steam-specific commands
     - ```ALT s + f```: Open Steam Friends list
     - ```ALT s + l```: Open Steam Game Library
     - ```ALT s + s```: Open Steam Store
 - Misc command
     - ```ALT + p```: Pin window (keep on top)
+
+### Notes
+ - To integrate WSL with your ahk-script instance, change line `83` to open whatever folder you prefer (I typically set the ubuntu `home` folder to my windows `home` folder and then set wsl to open `C:\Users\<username>)`
