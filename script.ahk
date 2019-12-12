@@ -30,7 +30,8 @@ RAlt & d::Suspend
     MouseClick, Right
     return
 !d::
-    ActiveOrLaunch("- Discord", "C:\Users\bgandy\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+    EnvGet, AppDataPath, appdata
+    ActiveOrLaunch("- Discord", AppDataPath .= "\..\Local\Discord\Update.exe --processStart Discord.exe")
     return
 !q::
     WinGetActiveTitle, ActiveWindowTitle
@@ -80,7 +81,7 @@ RAlt & d::Suspend
     return
 #IfWinNotActive, - Android Studio
 !Enter::
-    Run "C:\Windows\System32\wsl.exe", C:\
+    Run "C:\Windows\System32\wsl.exe", C:\Users\brand\
     return
 #IfWinNotActive
 !a::
