@@ -79,10 +79,10 @@ RAlt & d::Suspend
     return
 #IfWinNotActive, - Android Studio
 !Enter::
-    Run "C:\Windows\System32\wsl.exe", C:\Users\brand\
+    Run wsl.exe ~
     return
 !+Enter::
-    Run "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", C:\Users\brand\
+    Run powershell, %UserProfile%
     return
 #IfWinNotActive
 !a::
@@ -95,7 +95,9 @@ RAlt & d::Suspend
 !p::
     WinSet, AlwaysOnTop, , A
     return
-
+!c::
+  Run, calc
+  return
 ; Functions
 ActiveOrLaunch(title, exePath) 
 {

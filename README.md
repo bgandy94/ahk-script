@@ -29,6 +29,7 @@
   - `ALT + w` : Close active window
   - `ALT + a` : Toggle Audio device (will need to change if the names mismatch in nircmd)
     - run `nircmd showsounddevices` to figure out which device name you need to use
+  - `ALT + c` : Open calculator
 - Specific Program launch commands
   - `ALT + v` : Open or activate VS Code
   - `ALT + d` : Open or activate Discord
@@ -44,4 +45,4 @@
 
 ### Notes
 
-- To integrate WSL with your ahk-script instance, change line `83` to open whatever folder you prefer (I typically set the ubuntu `home` folder to my windows `home` folder and then set wsl to open `C:\Users\<username>)`
+- WSL is supported by default with the `ALT + ENTER` command, changing it is as simple as modifying that hotkey
