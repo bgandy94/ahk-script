@@ -3,10 +3,8 @@ GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 SetTitleMatchMode, 2
 
 ; Key switches
-#IfWinNotActive, VirtualBox
 CapsLock::ESC
 ESC::CapsLock 
-#IfWinNotActive
 
 ; Shortcuts
 RAlt & d::Suspend
@@ -83,18 +81,17 @@ RAlt & d::Suspend
 !Enter::
     Run "C:\Windows\System32\wsl.exe", C:\Users\brand\
     return
+!+Enter::
+    Run "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", C:\Users\brand\
+    return
 #IfWinNotActive
 !a::
-    toggle:=!toggle ;toggles up and down states. 
-    Run, mmsys.cpl 
-    WinWait,Sound
-    if toggle
-      ControlSend,SysListView321,{Down 5}
-    Else
-      ControlSend,SysListView321,{Down 1}
-    ControlClick,&Set Default
-    ControlClick,OK 
-    return
+  toggle:=!toggle
+
+  if toggle
+    Run, nircmd setdefaultsounddevice "Headset Earphone"
+  else
+    Run, nircmd setdefaultsounddevice "Speakers"
 !p::
     WinSet, AlwaysOnTop, , A
     return
