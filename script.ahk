@@ -1,6 +1,7 @@
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 SetTitleMatchMode, 2
+DetectHiddenText, On
 
 ; Key switches
 CapsLock::ESC
@@ -77,6 +78,36 @@ RAlt & d::Suspend
         DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
     }
     return
+!t::
+  Run, shell:AppsFolder\Microsoft.YourPhone_8wekyb3d8bbwe!App
+  IfWinNotExist, Your Phone
+  {
+  Sleep, 2500
+  Send, !2
+  SetControlDelay, -1
+  Click, 542, 220
+  return
+  }
+  Send, !2
+  Click, 542, 220
+  return
+!p::
+  Run, shell:AppsFolder\Microsoft.YourPhone_8wekyb3d8bbwe!App
+  IfWinNotExist, Your Phone
+  {
+  Sleep, 2500
+  Send, !5
+  SetControlDelay, -1
+  Click, 83, 570
+  Click, 959, 112
+  ; Click, 1593, 131
+  return
+  }
+  Send, !5
+  Click, 83, 570
+  Click, 959, 112
+  ; Click, 1593, 131
+  return
 #IfWinNotActive, - Android Studio
 !Enter::
     Run wsl.exe ~
@@ -92,9 +123,7 @@ RAlt & d::Suspend
     Run, nircmd setdefaultsounddevice "Headset Earphone"
   else
     Run, nircmd setdefaultsounddevice "Speakers"
-!p::
-    WinSet, AlwaysOnTop, , A
-    return
+  return
 !c::
   Run, calc
   return
